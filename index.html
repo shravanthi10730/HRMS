@@ -29,31 +29,6 @@
     </form>
   </div>
 
-  <script>
-    const showPassword = document.getElementById("showPassword");
-    const passwordInput = document.getElementById("password");
-    const form = document.getElementById("loginForm");
-    const messageLabel = document.getElementById("messageLabel");
-
-    showPassword.addEventListener("change", () => {
-      passwordInput.type = showPassword.checked ? "text" : "password";
-    });
-
-    form.addEventListener("submit", function(e) {
-      e.preventDefault();
-      const username = document.getElementById("username").value.trim();
-      const password = document.getElementById("password").value;
-
-      if (!username || !password) {
-        messageLabel.textContent = "Username or Password cannot be empty!";
-      } else if (username === "hradmin" && password === "hr@123") {
-        alert("WELCOME TO HRMS PORTAL");
-        messageLabel.textContent = "";
-        form.reset();
-      } else {
-        messageLabel.textContent = "Invalid Username or Password!";
-      }
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
